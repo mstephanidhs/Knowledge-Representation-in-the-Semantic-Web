@@ -2,7 +2,8 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
                       targetNamespace="http://www.somesite.com/schema/schedule"
                       xmlns="http://www.somesite.com/schema/schedule"
-                      elementFormDefault="qualified">				  
+                      elementFormDefault="qualified">	
+
 	<xsd:simpleType name="specificDay">
 		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="Monday"/>
@@ -14,6 +15,7 @@
 			<xsd:enumeration value="Sunday"/>
 		</xsd:restriction>
 	</xsd:simpleType>
+	
     <xsd:element name="Schedule">
         <xsd:complexType>
             <xsd:sequence>

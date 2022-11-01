@@ -85,10 +85,17 @@ elementFormDefault="qualified">
 		  <xsd:restriction base="eventType">
 			<xsd:sequence>
 			  <xsd:element name="Title" type="xsd:string"/>
-			  <xsd:element name="Lecture" type="lectureType" minOccurs="1" maxOccurs="10"/>
+			  <xsd:element name="Lecture" minOccurs="1" maxOccurs="10">
+					<xsd:complexType>
+						<xsd:sequence> 
+							<xsd:element name="Day"/>
+							<xsd:element name="Time"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
 			</xsd:sequence>
 		  </xsd:restriction>
 		</xsd:complexContent>
-	  </xsd:complexType>
+	</xsd:complexType>
 	
 </xsd:schema>

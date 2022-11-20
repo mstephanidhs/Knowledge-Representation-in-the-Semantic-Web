@@ -366,4 +366,250 @@
         <rdf:type rdf:resource="http://www.mydomain.org/uni-ns/Student"/>
     </rdf:Description>  
 
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Student/WinstonGlover">
+        <uni:has_name> Winston Glover </uni:has_name>
+        <uni:has_phone> 6951121349 </uni:has_phone>
+        <uni:has_email> winstonglover@gmail.com </uni:has_email>
+        <uni:has_age> 18 </uni:has_age>
+        <uni:member_of rdf:resource="http://www.mydomain.org/uni-ns/Department/BiomedicalEngineeringDepartment"/>
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns/Student"/>
+    </rdf:Description> 
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Student/ChristoperFarley">
+        <uni:has_name> Christoper Farley </uni:has_name>
+        <uni:has_phone> 6908442726 </uni:has_phone>
+        <uni:has_email> christoperfarley@gmail.com </uni:has_email>
+        <uni:has_age> 26 </uni:has_age>
+        <uni:member_of rdf:resource="http://www.mydomain.org/uni-ns/Department/BiomedicalEngineeringDepartment"/>
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns/Student"/>
+    </rdf:Description> 
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Student/LucyRoberts">
+        <uni:has_name> Lucy Roberts </uni:has_name>
+        <uni:has_phone> 6946094994 </uni:has_phone>
+        <uni:has_email> lucyroberts@gmail.com </uni:has_email>
+        <uni:has_age> 28 </uni:has_age>
+        <uni:member_of rdf:resource="http://www.mydomain.org/uni-ns/Department/AstronomyAndAstrophysicsDepartment"/>
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns/Student"/>
+    </rdf:Description> 
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Student/FriedaBond">
+        <uni:has_name> Frieda Bond </uni:has_name>
+        <uni:has_phone> 6934050882 </uni:has_phone>
+        <uni:has_email> friedabond@gmail.com </uni:has_email>
+        <uni:has_age> 20 </uni:has_age>
+        <uni:member_of rdf:resource="http://www.mydomain.org/uni-ns/Department/AstronomyAndAstrophysicsDepartment"/>
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns/Student"/>
+    </rdf:Description> 
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Student/RoseannCox">
+        <uni:has_name> Roseann Cox </uni:has_name>
+        <uni:has_phone> 6946265992 </uni:has_phone>
+        <uni:has_email> roseanncox@gmail.com </uni:has_email>
+        <uni:has_age> 29 </uni:has_age>
+        <uni:member_of rdf:resource="http://www.mydomain.org/uni-ns/Department/AstronomyAndAstrophysicsDepartment"/>
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns/Student"/>
+    </rdf:Description> 
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Lesson/Physics">
+	    <uni:les_name> Physics </uni:les_name>
+	    <uni:taught_by rdf:resource="http://www.mydomain.org/uni-ns/Professor/EddieJessup"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Lesson/Biology">
+	    <uni:les_name> Biology </uni:les_name>
+	    <uni:taught_by rdf:resource="http://www.mydomain.org/uni-ns/Professor/RobertLangdon"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Lesson/Design">
+	    <uni:les_name> Design </uni:les_name>
+	    <uni:taught_by rdf:resource="http://www.mydomain.org/uni-ns/Professor/HariSeldon"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Lesson/Accountancy">
+	    <uni:les_name> Accountancy </uni:les_name>
+	    <uni:taught_by rdf:resource="http://www.mydomain.org/uni-ns/Professor/CuthbertBinns"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Lesson/Linguistics">
+	    <uni:les_name> Linguistics </uni:les_name>
+	    <uni:taught_by rdf:resource="http://www.mydomain.org/uni-ns/Professor/CharityBurbage"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Lesson/BlackHoles">
+	    <uni:les_name> Black Holes </uni:les_name>
+	    <uni:taught_by rdf:resource="http://www.mydomain.org/uni-ns/Professor/RobertLangdon"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Lesson/Galaxies">
+	    <uni:les_name> Galaxies </uni:les_name>
+	    <uni:taught_by rdf:resource="http://www.mydomain.org/uni-ns/Professor/RobertLangdon"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Lesson/InterstellarMatter">
+	    <uni:les_name> Interstellar Matter </uni:les_name>
+	    <uni:taught_by rdf:resource="http://www.mydomain.org/uni-ns/Professor/EddieJessup"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Lesson/FinancialMarkets">
+	    <uni:les_name> Financial Markets </uni:les_name>
+	    <uni:taught_by rdf:resource="http://www.mydomain.org/uni-ns/YugoAmaryl"/>
+    </rdf:Description>  
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Lesson/FinancialEconometrics">
+	    <uni:les_name> Financial Econometrics </uni:les_name>
+	    <uni:taught_by rdf:resource="http://www.mydomain.org/uni-ns/YugoAmaryl"/>
+    </rdf:Description>  
+     
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Lesson/DescriptiveGeometry">
+	    <uni:les_name> Descriptive Geometry </uni:les_name>
+	    <uni:taught_by rdf:resource="http://www.mydomain.org/uni-ns/DigoryKirke"/>
+    </rdf:Description> 
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Lesson/VisualArts">
+	    <uni:les_name> Visual Arts </uni:les_name>
+	    <uni:taught_by rdf:resource="http://www.mydomain.org/uni-ns/DigoryKirke"/>
+    </rdf:Description> 
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Lesson/AncientHistory">
+	    <uni:les_name> Ancient History </uni:les_name>
+	    <uni:taught_by rdf:resource="http://www.mydomain.org/uni-ns/MariusParkinson"/>
+    </rdf:Description> 
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Lesson/ByzantineHistory">
+        <uni:les_name>  Byzantine History </uni:les_name>
+        <uni:taught_by rdf:resource="http://www.mydomain.org/uni-ns/MariusParkinson"/>
+    </rdf:Description> 
+    
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Lesson/MedievalHistory">
+        <uni:les_name>  Medieval History </uni:les_name>
+        <uni:taught_by rdf:resource="http://www.mydomain.org/uni-ns/IzabelleSalaza"/>
+    </rdf:Description> 
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Classroom/A1">
+	    <uni:room_name> A1 </uni:room_name>
+	    <uni:room_capacity> 20 </uni:room_capacity>
+	    <uni:room_department rdf:resource="http://www.mydomain.org/uni-ns/Department/BiomedicalEngineeringDepartment"/>
+	    <rdf:type rdf:resource="http://www.mydomain.org/uni-ns/Classroom"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Classroom/A2">
+	    <uni:room_name> A2 </uni:room_name>
+	    <uni:room_capacity> 30 </uni:room_capacity>
+	    <uni:room_department rdf:resource="http://www.mydomain.org/uni-ns/Department/BiomedicalEngineeringDepartment"/>
+	    <rdf:type rdf:resource="http://www.mydomain.org/uni-ns/Classroom"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Classroom/A2">
+	    <uni:room_name> A3 </uni:room_name>
+	    <uni:room_capacity> 11 </uni:room_capacity>
+	    <uni:room_department rdf:resource="http://www.mydomain.org/uni-ns/Department/BiomedicalEngineeringDepartment"/>
+	    <rdf:type rdf:resource="http://www.mydomain.org/uni-ns/Classroom"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Classroom/B1">
+	    <uni:room_name> B1 </uni:room_name>
+	    <uni:room_capacity> 40 </uni:room_capacity>
+	    <uni:room_department rdf:resource="http://www.mydomain.org/uni-ns/Department/AnthropologyDepartment"/>
+	    <rdf:type rdf:resource="http://www.mydomain.org/uni-ns/Classroom"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Classroom/B2">
+	    <uni:room_name> B2 </uni:room_name>
+	    <uni:room_capacity> 15 </uni:room_capacity>
+	    <uni:room_department rdf:resource="http://www.mydomain.org/uni-ns/Department/AnthropologyDepartment"/>
+	    <rdf:type rdf:resource="http://www.mydomain.org/uni-ns/Classroom"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Classroom/B2">
+	    <uni:room_name> B3 </uni:room_name>
+	    <uni:room_capacity> 24 </uni:room_capacity>
+	    <uni:room_department rdf:resource="http://www.mydomain.org/uni-ns/Department/AnthropologyDepartment"/>
+	    <rdf:type rdf:resource="http://www.mydomain.org/uni-ns/Classroom"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Classroom/C1">
+	    <uni:room_name> C1 </uni:room_name>
+	    <uni:room_capacity> 50 </uni:room_capacity>
+	    <uni:room_department rdf:resource="http://www.mydomain.org/uni-ns/Department/AccountingDivision"/>
+	    <rdf:type rdf:resource="http://www.mydomain.org/uni-ns/Classroom"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Classroom/C2">
+	    <uni:room_name> C2 </uni:room_name>
+	    <uni:room_capacity> 80 </uni:room_capacity>
+	    <uni:room_department rdf:resource="http://www.mydomain.org/uni-ns/Department/AccountingDivision"/>
+	    <rdf:type rdf:resource="http://www.mydomain.org/uni-ns/Classroom"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Classroom/C2">
+	    <uni:room_name> C2 </uni:room_name>
+	    <uni:room_capacity> 36 </uni:room_capacity>
+	    <uni:room_department rdf:resource="http://www.mydomain.org/uni-ns/Department/AccountingDivision"/>
+	    <rdf:type rdf:resource="http://www.mydomain.org/uni-ns/Classroom"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Classroom/D1">
+	    <uni:room_name> D1 </uni:room_name>
+	    <uni:room_capacity> 10 </uni:room_capacity>
+	    <uni:room_department rdf:resource="http://www.mydomain.org/uni-ns/Department/ArtHistoryDepartment"/>
+	    <rdf:type rdf:resource="http://www.mydomain.org/uni-ns/Classroom"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Classroom/D2">
+	    <uni:room_name> D2 </uni:room_name>
+	    <uni:room_capacity> 90 </uni:room_capacity>
+	    <uni:room_department rdf:resource="http://www.mydomain.org/uni-ns/Department/ArtHistoryDepartment"/>
+	    <rdf:type rdf:resource="http://www.mydomain.org/uni-ns/Classroom"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Classroom/D2">
+        <uni:room_name> D3 </uni:room_name>
+        <uni:room_capacity> 125 </uni:room_capacity>
+        <uni:room_department rdf:resource="http://www.mydomain.org/uni-ns/Department/ArtHistoryDepartment"/>
+        <rdf:type rdf:resource="http://www.mydomain.org/uni-ns/Classroom"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Classroom/E1">
+	    <uni:room_name> E1 </uni:room_name>
+	    <uni:room_capacity> 74 </uni:room_capacity>
+	    <uni:room_department rdf:resource="http://www.mydomain.org/uni-ns/Department/ArchitectureDepartment"/>
+	    <rdf:type rdf:resource="http://www.mydomain.org/uni-ns/Classroom"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Classroom/E2">
+	    <uni:room_name> E2 </uni:room_name>
+	    <uni:room_capacity> 68 </uni:room_capacity>
+	    <uni:room_department rdf:resource="http://www.mydomain.org/uni-ns/Department/ArchitectureDepartment"/>
+	    <rdf:type rdf:resource="http://www.mydomain.org/uni-ns/Classroom"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Classroom/E2">
+	    <uni:room_name> E3 </uni:room_name>
+	    <uni:room_capacity> 57 </uni:room_capacity>
+	    <uni:room_department rdf:resource="http://www.mydomain.org/uni-ns/Department/ArchitectureDepartment"/>
+	    <rdf:type rdf:resource="http://www.mydomain.org/uni-ns/Classroom"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Classroom/F1">
+	    <uni:room_name> F1 </uni:room_name>
+	    <uni:room_capacity> 53 </uni:room_capacity>
+	    <uni:room_department rdf:resource="http://www.mydomain.org/uni-ns/Department/AstronomyAndAstrophysicsDepartment"/>
+	    <rdf:type rdf:resource="http://www.mydomain.org/uni-ns/Classroom"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Classroom/F2">
+	    <uni:room_name> F2 </uni:room_name>
+	    <uni:room_capacity> 32 </uni:room_capacity>
+	    <uni:room_department rdf:resource="http://www.mydomain.org/uni-ns/Department/AstronomyAndAstrophysicsDepartment"/>
+	    <rdf:type rdf:resource="http://www.mydomain.org/uni-ns/Classroom"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.mydomain.org/uni-ns/Classroom/F2">
+	    <uni:room_name> F3 </uni:room_name>
+	    <uni:room_capacity> 67 </uni:room_capacity>
+	    <uni:room_department rdf:resource="http://www.mydomain.org/uni-ns/Department/AstronomyAndAstrophysicsDepartment"/>
+	    <rdf:type rdf:resource="http://www.mydomain.org/uni-ns/Classroom"/>
+    </rdf:Description>
+    
 </rdf:RDF>

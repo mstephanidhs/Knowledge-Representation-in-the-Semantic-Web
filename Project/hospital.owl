@@ -6,11 +6,15 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/mariosstefanidis/ontologies/2022/11/hospital">
+    <Prefix name="" IRI="http://www.semanticweb.org/mariosstefanidis/ontologies/2022/11/hospital"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Ambulance"/>
+    </Declaration>
     <Declaration>
         <Class IRI="#Analgesic"/>
     </Declaration>
@@ -18,22 +22,25 @@
         <Class IRI="#Antibiotic"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Asklipieio"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#AssociateSupplyOfficer"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Attiko"/>
+        <Class IRI="#AutoimmuneDisease"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Autoimmune"/>
+        <Class IRI="#Bed"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Cephalosporin"/>
+        <Class IRI="#Cancer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cardiology"/>
     </Declaration>
     <Declaration>
         <Class IRI="#CertifiedNursingAssistant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Clinic"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ClinicalNurseSupervisor"/>
@@ -42,7 +49,13 @@
         <Class IRI="#CostumerServiceAgent"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Department"/>
+        <Class IRI="#Degree"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dentistry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dermatology"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Disease"/>
@@ -63,16 +76,19 @@
         <Class IRI="#Hospitalized"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Hydrobiologist"/>
+        <Class IRI="#ICU"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#KAT"/>
+        <Class IRI="#KidneyAutoimmune"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#KratikoNikaias"/>
+        <Class IRI="#KidneyDisease"/>
     </Declaration>
     <Declaration>
         <Class IRI="#LabTechnician"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Laboratory"/>
     </Declaration>
     <Declaration>
         <Class IRI="#LogisticsCoordinator"/>
@@ -81,37 +97,46 @@
         <Class IRI="#LogisticsTeam"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Lupus"/>
+        <Class IRI="#LungCancer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LungDisease"/>
     </Declaration>
     <Declaration>
         <Class IRI="#MedicalAssistant"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Medicine"/>
+        <Class IRI="#MedicalEquipmentRepairTechnician"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Metropolitan"/>
+        <Class IRI="#Medicine"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Microbiologist"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#NoICU"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Nurse"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Paidon"/>
+        <Class IRI="#Oncology"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pathology"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Patient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pediatrics"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Physician"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Private"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Psoriasis"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Public"/>
@@ -123,19 +148,58 @@
         <Class IRI="#RegisteredNurse"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#SkinDisease"/>
+        <Class IRI="#Room"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Staff"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Storage"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Surgeon"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Tetracyline"/>
+        <Class IRI="#Visitor"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Visitor"/>
+        <ObjectProperty IRI="#canFit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#consistsOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contains"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#encapsulates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#owns"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#posseses"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#responsibleFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#works"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#heavilyInjured"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isTreatedBy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Augmentin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cardiothoracic"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#Analgesic"/>
@@ -144,17 +208,45 @@
         </ObjectComplementOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Antibiotic"/>
+        <Class IRI="#Disease"/>
         <ObjectUnionOf>
-            <Class IRI="#Cephalosporin"/>
-            <Class IRI="#Tetracyline"/>
+            <Class IRI="#AutoimmuneDisease"/>
+            <Class IRI="#Cancer"/>
+            <Class IRI="#KidneyDisease"/>
+            <Class IRI="#LungDisease"/>
         </ObjectUnionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Lupus"/>
+        <Class IRI="#Doctor"/>
         <ObjectIntersectionOf>
-            <Class IRI="#Autoimmune"/>
-            <Class IRI="#SkinDisease"/>
+            <Class IRI="#HealthCareWorker"/>
+            <ObjectComplementOf>
+                <ObjectIntersectionOf>
+                    <Class IRI="#MedicalAssistant"/>
+                    <Class IRI="#Nurse"/>
+                </ObjectIntersectionOf>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Doctor"/>
+        <DataHasValue>
+            <DataProperty IRI="#isTreatedBy"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#KidneyAutoimmune"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#AutoimmuneDisease"/>
+            <Class IRI="#KidneyDisease"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#LungCancer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Cancer"/>
+            <Class IRI="#LungDisease"/>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -165,16 +257,25 @@
         </ObjectUnionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Psoriasis"/>
+        <Class IRI="#NoICU"/>
         <ObjectIntersectionOf>
-            <Class IRI="#Autoimmune"/>
-            <Class IRI="#SkinDisease"/>
+            <Class IRI="#Room"/>
+            <ObjectComplementOf>
+                <Class IRI="#ICU"/>
+            </ObjectComplementOf>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Tetracyline"/>
+        <Class IRI="#NoICU"/>
+        <DataHasValue>
+            <DataProperty IRI="#heavilyInjured"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Public"/>
         <ObjectComplementOf>
-            <Class IRI="#Cephalosporin"/>
+            <Class IRI="#Private"/>
         </ObjectComplementOf>
     </EquivalentClasses>
     <SubClassOf>
@@ -186,24 +287,31 @@
         <Class IRI="#Medicine"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Asklipieio"/>
-        <Class IRI="#Department"/>
+        <Class IRI="#Antibiotic"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#encapsulates"/>
+            <NamedIndividual IRI="#Augmentin"/>
+        </ObjectHasValue>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#AssociateSupplyOfficer"/>
         <Class IRI="#LogisticsTeam"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Attiko"/>
-        <Class IRI="#Department"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Autoimmune"/>
+        <Class IRI="#AutoimmuneDisease"/>
         <Class IRI="#Disease"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Cephalosporin"/>
-        <Class IRI="#Antibiotic"/>
+        <Class IRI="#Bed"/>
+        <Class IRI="#ICU"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cancer"/>
+        <Class IRI="#Disease"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cardiology"/>
+        <Class IRI="#Clinic"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CertifiedNursingAssistant"/>
@@ -218,8 +326,23 @@
         <Class IRI="#LogisticsTeam"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Dentistry"/>
+        <Class IRI="#Clinic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dermatology"/>
+        <Class IRI="#Clinic"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Doctor"/>
         <Class IRI="#HealthCareWorker"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Doctor"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#responsibleFor"/>
+            <Class IRI="#Patient"/>
+        </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#EmergyRoomRegisteredNurse"/>
@@ -230,24 +353,41 @@
         <Class IRI="#Staff"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Hospital"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#contains"/>
+            <Class IRI="#Clinic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hospital"/>
+        <ObjectMinCardinality cardinality="6">
+            <ObjectProperty IRI="#posseses"/>
+            <Class IRI="#Ambulance"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Hospitalized"/>
         <Class IRI="#Patient"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Hydrobiologist"/>
-        <Class IRI="#LabTechnician"/>
+        <Class IRI="#ICU"/>
+        <Class IRI="#Room"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#KAT"/>
-        <Class IRI="#Department"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#KratikoNikaias"/>
-        <Class IRI="#Department"/>
+        <Class IRI="#KidneyDisease"/>
+        <Class IRI="#Disease"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#LabTechnician"/>
         <Class IRI="#Staff"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Laboratory"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#works"/>
+            <Class IRI="#LabTechnician"/>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#LogisticsCoordinator"/>
@@ -258,28 +398,40 @@
         <Class IRI="#Staff"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Lupus"/>
-        <Class IRI="#SkinDisease"/>
+        <Class IRI="#LungDisease"/>
+        <Class IRI="#Disease"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MedicalAssistant"/>
         <Class IRI="#HealthCareWorker"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Metropolitan"/>
-        <Class IRI="#Department"/>
+        <Class IRI="#MedicalEquipmentRepairTechnician"/>
+        <Class IRI="#LabTechnician"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Microbiologist"/>
         <Class IRI="#LabTechnician"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#NoICU"/>
+        <Class IRI="#Room"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Nurse"/>
         <Class IRI="#HealthCareWorker"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Paidon"/>
-        <Class IRI="#Department"/>
+        <Class IRI="#Oncology"/>
+        <Class IRI="#Clinic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pathology"/>
+        <Class IRI="#Clinic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pediatrics"/>
+        <Class IRI="#Clinic"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Physician"/>
@@ -288,10 +440,6 @@
     <SubClassOf>
         <Class IRI="#Private"/>
         <Class IRI="#Hospital"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Psoriasis"/>
-        <Class IRI="#Autoimmune"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Public"/>
@@ -306,65 +454,121 @@
         <Class IRI="#Nurse"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#SkinDisease"/>
-        <Class IRI="#Disease"/>
+        <Class IRI="#Room"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#consistsOf"/>
+            <Class IRI="#Hospitalized"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Staff"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#owns"/>
+            <Class IRI="#Degree"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Storage"/>
+        <ObjectMaxCardinality cardinality="10000">
+            <ObjectProperty IRI="#canFit"/>
+            <Class IRI="#Medicine"/>
+        </ObjectMaxCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Surgeon"/>
         <Class IRI="#Doctor"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Tetracyline"/>
-        <Class IRI="#Antibiotic"/>
+        <Class IRI="#Surgeon"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#is"/>
+            <NamedIndividual IRI="#Cardiothoracic"/>
+        </ObjectHasValue>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Visitor"/>
         <Class IRI="#Patient"/>
     </SubClassOf>
     <DisjointClasses>
-        <Class IRI="#Asklipieio"/>
-        <Class IRI="#Attiko"/>
+        <Class IRI="#Cardiology"/>
+        <Class IRI="#Dentistry"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Asklipieio"/>
-        <Class IRI="#KAT"/>
+        <Class IRI="#Cardiology"/>
+        <Class IRI="#Dermatology"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Asklipieio"/>
-        <Class IRI="#KratikoNikaias"/>
+        <Class IRI="#Cardiology"/>
+        <Class IRI="#Oncology"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Asklipieio"/>
-        <Class IRI="#Metropolitan"/>
+        <Class IRI="#Cardiology"/>
+        <Class IRI="#Pathology"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Asklipieio"/>
-        <Class IRI="#Paidon"/>
+        <Class IRI="#Cardiology"/>
+        <Class IRI="#Pediatrics"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Attiko"/>
-        <Class IRI="#KAT"/>
+        <Class IRI="#Dentistry"/>
+        <Class IRI="#Dermatology"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Attiko"/>
-        <Class IRI="#Metropolitan"/>
+        <Class IRI="#Dentistry"/>
+        <Class IRI="#Oncology"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Attiko"/>
-        <Class IRI="#Paidon"/>
+        <Class IRI="#Dentistry"/>
+        <Class IRI="#Pediatrics"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#KAT"/>
-        <Class IRI="#KratikoNikaias"/>
+        <Class IRI="#Dermatology"/>
+        <Class IRI="#Pathology"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#KratikoNikaias"/>
-        <Class IRI="#Metropolitan"/>
+        <Class IRI="#Oncology"/>
+        <Class IRI="#Pathology"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Metropolitan"/>
-        <Class IRI="#Paidon"/>
+        <Class IRI="#Oncology"/>
+        <Class IRI="#Pediatrics"/>
     </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Antibiotic"/>
+        <NamedIndividual IRI="#Augmentin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Surgeon"/>
+        <NamedIndividual IRI="#Cardiothoracic"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#consistsOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#encapsulates"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#posseses"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#heavilyInjured"/>
+        <Class IRI="#Room"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isTreatedBy"/>
+        <Class IRI="#HealthCareWorker"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#heavilyInjured"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isTreatedBy"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
 </Ontology>
 
 

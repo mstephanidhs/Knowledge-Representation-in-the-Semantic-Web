@@ -1,0 +1,373 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/mariosstefanidis/ontologies/2022/11/hospital"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/mariosstefanidis/ontologies/2022/11/hospital">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Analgesic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Antibiotic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Asklipieio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AssociateSupplyOfficer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Attiko"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Autoimmune"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cephalosporin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CertifiedNursingAssistant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClinicalNurseSupervisor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CostumerServiceAgent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Department"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Disease"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Doctor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EmergyRoomRegisteredNurse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HealthCareWorker"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hospital"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hospitalized"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hydrobiologist"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#KAT"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#KratikoNikaias"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LabTechnician"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LogisticsCoordinator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LogisticsTeam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lupus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MedicalAssistant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Medicine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Metropolitan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Microbiologist"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nurse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Paidon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Patient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Physician"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Private"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Psoriasis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Public"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Radiologist"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RegisteredNurse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SkinDisease"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Staff"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Surgeon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tetracyline"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Visitor"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Analgesic"/>
+        <ObjectComplementOf>
+            <Class IRI="#Antibiotic"/>
+        </ObjectComplementOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Antibiotic"/>
+        <ObjectUnionOf>
+            <Class IRI="#Cephalosporin"/>
+            <Class IRI="#Tetracyline"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Lupus"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Autoimmune"/>
+            <Class IRI="#SkinDisease"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Medicine"/>
+        <ObjectUnionOf>
+            <Class IRI="#Analgesic"/>
+            <Class IRI="#Antibiotic"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Psoriasis"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Autoimmune"/>
+            <Class IRI="#SkinDisease"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Tetracyline"/>
+        <ObjectComplementOf>
+            <Class IRI="#Cephalosporin"/>
+        </ObjectComplementOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Analgesic"/>
+        <Class IRI="#Medicine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Antibiotic"/>
+        <Class IRI="#Medicine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Asklipieio"/>
+        <Class IRI="#Department"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AssociateSupplyOfficer"/>
+        <Class IRI="#LogisticsTeam"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Attiko"/>
+        <Class IRI="#Department"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Autoimmune"/>
+        <Class IRI="#Disease"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cephalosporin"/>
+        <Class IRI="#Antibiotic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CertifiedNursingAssistant"/>
+        <Class IRI="#Nurse"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClinicalNurseSupervisor"/>
+        <Class IRI="#Nurse"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CostumerServiceAgent"/>
+        <Class IRI="#LogisticsTeam"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Doctor"/>
+        <Class IRI="#HealthCareWorker"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EmergyRoomRegisteredNurse"/>
+        <Class IRI="#Nurse"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HealthCareWorker"/>
+        <Class IRI="#Staff"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hospitalized"/>
+        <Class IRI="#Patient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hydrobiologist"/>
+        <Class IRI="#LabTechnician"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#KAT"/>
+        <Class IRI="#Department"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#KratikoNikaias"/>
+        <Class IRI="#Department"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LabTechnician"/>
+        <Class IRI="#Staff"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LogisticsCoordinator"/>
+        <Class IRI="#LogisticsTeam"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LogisticsTeam"/>
+        <Class IRI="#Staff"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lupus"/>
+        <Class IRI="#SkinDisease"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MedicalAssistant"/>
+        <Class IRI="#HealthCareWorker"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Metropolitan"/>
+        <Class IRI="#Department"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Microbiologist"/>
+        <Class IRI="#LabTechnician"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nurse"/>
+        <Class IRI="#HealthCareWorker"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Paidon"/>
+        <Class IRI="#Department"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Physician"/>
+        <Class IRI="#Doctor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Private"/>
+        <Class IRI="#Hospital"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Psoriasis"/>
+        <Class IRI="#Autoimmune"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Public"/>
+        <Class IRI="#Hospital"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Radiologist"/>
+        <Class IRI="#LabTechnician"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RegisteredNurse"/>
+        <Class IRI="#Nurse"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SkinDisease"/>
+        <Class IRI="#Disease"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Surgeon"/>
+        <Class IRI="#Doctor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tetracyline"/>
+        <Class IRI="#Antibiotic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Visitor"/>
+        <Class IRI="#Patient"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Asklipieio"/>
+        <Class IRI="#Attiko"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Asklipieio"/>
+        <Class IRI="#KAT"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Asklipieio"/>
+        <Class IRI="#KratikoNikaias"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Asklipieio"/>
+        <Class IRI="#Metropolitan"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Asklipieio"/>
+        <Class IRI="#Paidon"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Attiko"/>
+        <Class IRI="#KAT"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Attiko"/>
+        <Class IRI="#Metropolitan"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Attiko"/>
+        <Class IRI="#Paidon"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#KAT"/>
+        <Class IRI="#KratikoNikaias"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#KratikoNikaias"/>
+        <Class IRI="#Metropolitan"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Metropolitan"/>
+        <Class IRI="#Paidon"/>
+    </DisjointClasses>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

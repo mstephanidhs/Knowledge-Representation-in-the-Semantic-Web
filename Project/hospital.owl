@@ -172,9 +172,6 @@
         <ObjectProperty IRI="#canFit"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#clearsRoom"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#consistsOf"/>
     </Declaration>
     <Declaration>
@@ -182,9 +179,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#encapsulates"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#fires"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#givesBonus"/>
@@ -217,6 +211,9 @@
         <ObjectProperty IRI="#posseses"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#promotes"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#responsibleFor"/>
     </Declaration>
     <Declaration>
@@ -224,6 +221,12 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#staysIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#staysInICU"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#staysInNoICU"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#staysWith"/>
@@ -289,16 +292,133 @@
         <DataProperty IRI="#staffID"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Aggeliki_Kourou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Alexis_Tsipras"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AttikoHospital"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Augmentin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Callie_Torres"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Cardiothoracic"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Clinic1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Clinic2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dimitris_Vergnis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EconomicsDegree"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Elena_Paparizou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fotini_Aggelaki"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICU1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ICU2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ilias_Psinakis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#KAT"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Katerina_Mantellou"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Katerina_Mitropoulou"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Katerina_Papadopoulou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kiriakos_Mitsotakis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Konstantinos_Argiros"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kostas_Kaoukis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kostas_Mallopoulos"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kostas_Manolas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lab1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lab2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Litsa_Kritsioni"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Manolis_Foteinos"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Maria_Tsavea"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Marios_Stefanidis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Maura_Polydorou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Meredith_Gray"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Miltos_Pasxalidis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mimi_Kollarou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NoICU1"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#NurseDegree"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Room1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Room12"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Room125"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Room2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Room36"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sakis_Rouvas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Spiros_Vlachos"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#Analgesic"/>
@@ -629,26 +749,367 @@
         <Class IRI="#Pediatrics"/>
     </DisjointClasses>
     <ClassAssertion>
+        <Class IRI="#Staff"/>
+        <NamedIndividual IRI="#Aggeliki_Kourou"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hospitalized"/>
+        <NamedIndividual IRI="#Alexis_Tsipras"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hospital"/>
+        <NamedIndividual IRI="#AttikoHospital"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Antibiotic"/>
         <NamedIndividual IRI="#Augmentin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Doctor"/>
+        <NamedIndividual IRI="#Callie_Torres"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Surgeon"/>
         <NamedIndividual IRI="#Cardiothoracic"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Clinic"/>
+        <NamedIndividual IRI="#Clinic1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Clinic"/>
+        <NamedIndividual IRI="#Clinic2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hospitalized"/>
+        <NamedIndividual IRI="#Dimitris_Vergnis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Degree"/>
+        <NamedIndividual IRI="#EconomicsDegree"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Radiologist"/>
+        <NamedIndividual IRI="#Elena_Paparizou"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MedicalAssistant"/>
+        <NamedIndividual IRI="#Fotini_Aggelaki"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ICU"/>
+        <NamedIndividual IRI="#ICU1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ICU"/>
+        <NamedIndividual IRI="#ICU2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Doctor"/>
+        <NamedIndividual IRI="#Ilias_Psinakis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hospital"/>
+        <NamedIndividual IRI="#KAT"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hospitalized"/>
+        <NamedIndividual IRI="#Katerina_Mantellou"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Nurse"/>
         <NamedIndividual IRI="#Katerina_Mitropoulou"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MedicalAssistant"/>
+        <NamedIndividual IRI="#Katerina_Papadopoulou"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hospitalized"/>
+        <NamedIndividual IRI="#Kiriakos_Mitsotakis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Staff"/>
+        <NamedIndividual IRI="#Konstantinos_Argiros"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hospitalized"/>
+        <NamedIndividual IRI="#Kostas_Kaoukis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hospitalized"/>
+        <NamedIndividual IRI="#Kostas_Mallopoulos"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hospitalized"/>
+        <NamedIndividual IRI="#Kostas_Manolas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Laboratory"/>
+        <NamedIndividual IRI="#Lab1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Laboratory"/>
+        <NamedIndividual IRI="#Lab2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hospitalized"/>
+        <NamedIndividual IRI="#Litsa_Kritsioni"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LogisticsTeam"/>
+        <NamedIndividual IRI="#Manolis_Foteinos"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MedicalAssistant"/>
+        <NamedIndividual IRI="#Maria_Tsavea"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hospitalized"/>
+        <NamedIndividual IRI="#Marios_Stefanidis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LogisticsTeam"/>
+        <NamedIndividual IRI="#Maura_Polydorou"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Doctor"/>
+        <NamedIndividual IRI="#Meredith_Gray"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Staff"/>
+        <NamedIndividual IRI="#Miltos_Pasxalidis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hospitalized"/>
+        <NamedIndividual IRI="#Mimi_Kollarou"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NoICU"/>
+        <NamedIndividual IRI="#NoICU1"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Degree"/>
         <NamedIndividual IRI="#NurseDegree"/>
     </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Room"/>
+        <NamedIndividual IRI="#Room1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Room"/>
+        <NamedIndividual IRI="#Room12"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Room"/>
+        <NamedIndividual IRI="#Room125"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Room"/>
+        <NamedIndividual IRI="#Room2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Room"/>
+        <NamedIndividual IRI="#Room36"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Visitor"/>
+        <NamedIndividual IRI="#Sakis_Rouvas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Staff"/>
+        <NamedIndividual IRI="#Spiros_Vlachos"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#staysWith"/>
+        <NamedIndividual IRI="#Alexis_Tsipras"/>
+        <NamedIndividual IRI="#Kiriakos_Mitsotakis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEmployee"/>
+        <NamedIndividual IRI="#AttikoHospital"/>
+        <NamedIndividual IRI="#Maura_Polydorou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#promotes"/>
+        <NamedIndividual IRI="#AttikoHospital"/>
+        <NamedIndividual IRI="#Maura_Polydorou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDoctor"/>
+        <NamedIndividual IRI="#Clinic2"/>
+        <NamedIndividual IRI="#Callie_Torres"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isOwnedBy"/>
+        <NamedIndividual IRI="#EconomicsDegree"/>
+        <NamedIndividual IRI="#Spiros_Vlachos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#worksAtLaboratory"/>
+        <NamedIndividual IRI="#Elena_Paparizou"/>
+        <NamedIndividual IRI="#Lab1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#worksAtLaboratory"/>
+        <NamedIndividual IRI="#Elena_Paparizou"/>
+        <NamedIndividual IRI="#Lab2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isColleaguesWith"/>
+        <NamedIndividual IRI="#Fotini_Aggelaki"/>
+        <NamedIndividual IRI="#Katerina_Papadopoulou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#accommodatesPatient"/>
+        <NamedIndividual IRI="#ICU1"/>
+        <NamedIndividual IRI="#Dimitris_Vergnis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#treats"/>
+        <NamedIndividual IRI="#Ilias_Psinakis"/>
+        <NamedIndividual IRI="#Sakis_Rouvas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#givesBonus"/>
+        <NamedIndividual IRI="#KAT"/>
+        <NamedIndividual IRI="#Manolis_Foteinos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#givesLeave"/>
+        <NamedIndividual IRI="#KAT"/>
+        <NamedIndividual IRI="#Manolis_Foteinos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEmployee"/>
+        <NamedIndividual IRI="#KAT"/>
+        <NamedIndividual IRI="#Manolis_Foteinos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#staysIn"/>
+        <NamedIndividual IRI="#Katerina_Mantellou"/>
+        <NamedIndividual IRI="#Room2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#staysInICU"/>
+        <NamedIndividual IRI="#Katerina_Mantellou"/>
+        <NamedIndividual IRI="#ICU2"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasDegree"/>
         <NamedIndividual IRI="#Katerina_Mitropoulou"/>
         <NamedIndividual IRI="#NurseDegree"/>
     </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isColleaguesWith"/>
+        <NamedIndividual IRI="#Katerina_Papadopoulou"/>
+        <NamedIndividual IRI="#Maria_Tsavea"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sharesRoomWith"/>
+        <NamedIndividual IRI="#Kostas_Kaoukis"/>
+        <NamedIndividual IRI="#Litsa_Kritsioni"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#staysIn"/>
+        <NamedIndividual IRI="#Kostas_Mallopoulos"/>
+        <NamedIndividual IRI="#Room1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#staysIn"/>
+        <NamedIndividual IRI="#Kostas_Mallopoulos"/>
+        <NamedIndividual IRI="#Room12"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#staysIn"/>
+        <NamedIndividual IRI="#Kostas_Manolas"/>
+        <NamedIndividual IRI="#Room36"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#staysInNoICU"/>
+        <NamedIndividual IRI="#Kostas_Manolas"/>
+        <NamedIndividual IRI="#NoICU1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#sharesRoomWith"/>
+        <NamedIndividual IRI="#Litsa_Kritsioni"/>
+        <NamedIndividual IRI="#Mimi_Kollarou"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#belongsTo"/>
+        <NamedIndividual IRI="#Meredith_Gray"/>
+        <NamedIndividual IRI="#Clinic1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#worksWith"/>
+        <NamedIndividual IRI="#Miltos_Pasxalidis"/>
+        <NamedIndividual IRI="#Konstantinos_Argiros"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#accommodates"/>
+        <NamedIndividual IRI="#Room125"/>
+        <NamedIndividual IRI="#Marios_Stefanidis"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#TIN"/>
+        <NamedIndividual IRI="#Aggeliki_Kourou"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">789123456</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#email"/>
+        <NamedIndividual IRI="#Aggeliki_Kourou"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">angkourou@gmail.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#SSN"/>
+        <NamedIndividual IRI="#Alexis_Tsipras"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">745698132</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#specialty"/>
+        <NamedIndividual IRI="#Callie_Torres"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Orthopedic</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numberOfWorkers"/>
+        <NamedIndividual IRI="#Clinic1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">200</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numberOfWorkers"/>
+        <NamedIndividual IRI="#Clinic2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">150</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#SSN"/>
+        <NamedIndividual IRI="#Dimitris_Vergnis"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">12040008895</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#grade"/>
+        <NamedIndividual IRI="#EconomicsDegree"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">8.3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#staffID"/>
+        <NamedIndividual IRI="#Elena_Paparizou"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#staffID"/>
+        <NamedIndividual IRI="#Fotini_Aggelaki"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">16</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#specialty"/>
+        <NamedIndividual IRI="#Ilias_Psinakis"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Andrologist</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#SSN"/>
+        <NamedIndividual IRI="#Katerina_Mantellou"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">148259637</Literal>
+    </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#TIN"/>
         <NamedIndividual IRI="#Katerina_Mitropoulou"/>
@@ -665,6 +1126,91 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#staffID"/>
+        <NamedIndividual IRI="#Katerina_Papadopoulou"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">33</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#SSN"/>
+        <NamedIndividual IRI="#Kiriakos_Mitsotakis"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">156234978</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#staffID"/>
+        <NamedIndividual IRI="#Konstantinos_Argiros"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">101</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#SSN"/>
+        <NamedIndividual IRI="#Kostas_Kaoukis"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">132465798</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#SSN"/>
+        <NamedIndividual IRI="#Kostas_Mallopoulos"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">753159486</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#SSN"/>
+        <NamedIndividual IRI="#Kostas_Manolas"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">742853196</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#SSN"/>
+        <NamedIndividual IRI="#Litsa_Kritsioni"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">718293645</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#staffID"/>
+        <NamedIndividual IRI="#Manolis_Foteinos"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#staffID"/>
+        <NamedIndividual IRI="#Maria_Tsavea"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#SSN"/>
+        <NamedIndividual IRI="#Marios_Stefanidis"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">14070001038</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#admissionDate"/>
+        <NamedIndividual IRI="#Marios_Stefanidis"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-25T09:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#staffID"/>
+        <NamedIndividual IRI="#Maura_Polydorou"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#email"/>
+        <NamedIndividual IRI="#Meredith_Gray"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">meredithgray@gmail.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#phone"/>
+        <NamedIndividual IRI="#Meredith_Gray"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">6945777958</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#specialty"/>
+        <NamedIndividual IRI="#Meredith_Gray"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">General Surgeon</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#staffID"/>
+        <NamedIndividual IRI="#Miltos_Pasxalidis"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">102</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#SSN"/>
+        <NamedIndividual IRI="#Mimi_Kollarou"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">796845123</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#acquiredDate"/>
         <NamedIndividual IRI="#NurseDegree"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-14T09:00:00</Literal>
@@ -674,10 +1220,21 @@
         <NamedIndividual IRI="#NurseDegree"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">8.25</Literal>
     </DataPropertyAssertion>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#clearsRoom"/>
-        <ObjectProperty IRI="#staysIn"/>
-    </SubObjectPropertyOf>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#heavilyInjured"/>
+        <NamedIndividual IRI="#Room125"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#SSN"/>
+        <NamedIndividual IRI="#Sakis_Rouvas"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">236571489</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#staffID"/>
+        <NamedIndividual IRI="#Spiros_Vlachos"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">86</Literal>
+    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#consistsOf"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
@@ -685,10 +1242,6 @@
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#encapsulates"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#fires"/>
-        <ObjectProperty IRI="#hasEmployee"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#givesBonus"/>
@@ -701,6 +1254,18 @@
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#posseses"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#promotes"/>
+        <ObjectProperty IRI="#hasEmployee"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#staysInICU"/>
+        <ObjectProperty IRI="#staysIn"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#staysInNoICU"/>
+        <ObjectProperty IRI="#staysIn"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#treats"/>
@@ -759,14 +1324,6 @@
         <Class IRI="#Doctor"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#clearsRoom"/>
-        <Class IRI="#Hospitalized"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#fires"/>
-        <Class IRI="#Hospital"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#givesBonus"/>
         <Class IRI="#Hospital"/>
     </ObjectPropertyDomain>
@@ -795,12 +1352,24 @@
         <Class IRI="#Degree"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#promotes"/>
+        <Class IRI="#Hospital"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#sharesRoomWith"/>
         <Class IRI="#Hospitalized"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#staysIn"/>
-        <Class IRI="#Patient"/>
+        <Class IRI="#Hospitalized"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#staysInICU"/>
+        <Class IRI="#Room"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#staysInNoICU"/>
+        <Class IRI="#Room"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#staysWith"/>
@@ -824,7 +1393,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#accommodates"/>
-        <Class IRI="#Patient"/>
+        <Class IRI="#Hospitalized"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#accommodatesPatient"/>
@@ -833,14 +1402,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#belongsTo"/>
         <Class IRI="#Clinic"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#clearsRoom"/>
-        <Class IRI="#Room"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#fires"/>
-        <Class IRI="#LogisticsTeam"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#givesBonus"/>
@@ -871,12 +1432,24 @@
         <Class IRI="#Staff"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#promotes"/>
+        <Class IRI="#LogisticsTeam"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#sharesRoomWith"/>
         <Class IRI="#Hospitalized"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#staysIn"/>
         <Class IRI="#Room"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#staysInICU"/>
+        <Class IRI="#ICU"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#staysInNoICU"/>
+        <Class IRI="#NoICU"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#staysWith"/>
@@ -1012,7 +1585,7 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#numberOfWorkers"/>
-        <Datatype abbreviatedIRI="xsd:nonPositiveInteger"/>
+        <Datatype abbreviatedIRI="xsd:positiveInteger"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#phone"/>

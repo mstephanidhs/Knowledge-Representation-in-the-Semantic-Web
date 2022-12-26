@@ -373,6 +373,9 @@
         <NamedIndividual IRI="#Litsa_Kritsioni"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Man_Our"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Manolis_Foteinos"/>
     </Declaration>
     <Declaration>
@@ -425,9 +428,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#antimicrobial_agents"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Man_Our"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#Disease"/>
@@ -1001,6 +1001,11 @@
         <ObjectProperty IRI="#hasEmployee"/>
         <NamedIndividual IRI="#KAT"/>
         <NamedIndividual IRI="#Manolis_Foteinos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasEmployee"/>
+        <NamedIndividual IRI="#KAT"/>
+        <NamedIndividual IRI="#Maura_Polydorou"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#staysIn"/>

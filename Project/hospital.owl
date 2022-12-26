@@ -382,6 +382,9 @@
         <NamedIndividual IRI="#Marios_Stefanidis"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Markos_Tsigkounis"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Maura_Polydorou"/>
     </Declaration>
     <Declaration>
@@ -420,12 +423,12 @@
     <Declaration>
         <NamedIndividual IRI="#Spiros_Vlachos"/>
     </Declaration>
-    <EquivalentClasses>
-        <Class IRI="#Analgesic"/>
-        <ObjectComplementOf>
-            <Class IRI="#Antibiotic"/>
-        </ObjectComplementOf>
-    </EquivalentClasses>
+    <Declaration>
+        <NamedIndividual IRI="#antimicrobial_agents"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Man_Our"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="#Disease"/>
         <ObjectUnionOf>
@@ -491,15 +494,15 @@
             <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
         </DataHasValue>
     </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Public"/>
-        <ObjectComplementOf>
-            <Class IRI="#Private"/>
-        </ObjectComplementOf>
-    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#Analgesic"/>
         <Class IRI="#Medicine"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Analgesic"/>
+        <ObjectComplementOf>
+            <Class IRI="#Antibiotic"/>
+        </ObjectComplementOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Antibiotic"/>
@@ -509,7 +512,7 @@
         <Class IRI="#Antibiotic"/>
         <ObjectHasValue>
             <ObjectProperty IRI="#encapsulates"/>
-            <NamedIndividual IRI="#Augmentin"/>
+            <NamedIndividual IRI="#antimicrobial_agents"/>
         </ObjectHasValue>
     </SubClassOf>
     <SubClassOf>
@@ -659,6 +662,12 @@
     <SubClassOf>
         <Class IRI="#Public"/>
         <Class IRI="#Hospital"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Public"/>
+        <ObjectComplementOf>
+            <Class IRI="#Private"/>
+        </ObjectComplementOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Radiologist"/>
@@ -869,6 +878,10 @@
         <NamedIndividual IRI="#Marios_Stefanidis"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Patient"/>
+        <NamedIndividual IRI="#Markos_Tsigkounis"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#LogisticsTeam"/>
         <NamedIndividual IRI="#Maura_Polydorou"/>
     </ClassAssertion>
@@ -919,6 +932,10 @@
     <ClassAssertion>
         <Class IRI="#Staff"/>
         <NamedIndividual IRI="#Spiros_Vlachos"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Antibiotic"/>
+        <NamedIndividual IRI="#antimicrobial_agents"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#staysWith"/>
@@ -1036,6 +1053,11 @@
         <NamedIndividual IRI="#Mimi_Kollarou"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#consistsOf"/>
+        <NamedIndividual IRI="#Man_Our"/>
+        <NamedIndividual IRI="#Markos_Tsigkounis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#belongsTo"/>
         <NamedIndividual IRI="#Meredith_Gray"/>
         <NamedIndividual IRI="#Clinic1"/>
@@ -1049,6 +1071,11 @@
         <ObjectProperty IRI="#accommodates"/>
         <NamedIndividual IRI="#Room125"/>
         <NamedIndividual IRI="#Marios_Stefanidis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#consistsOf"/>
+        <NamedIndividual IRI="#Room125"/>
+        <NamedIndividual IRI="#Markos_Tsigkounis"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#TIN"/>
@@ -1159,6 +1186,11 @@
         <DataProperty IRI="#SSN"/>
         <NamedIndividual IRI="#Litsa_Kritsioni"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">718293645</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#SSN"/>
+        <NamedIndividual IRI="#Man_Our"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">159487632</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#staffID"/>
@@ -1352,6 +1384,10 @@
         <Class IRI="#Degree"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#posseses"/>
+        <Class IRI="#Hospital"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#promotes"/>
         <Class IRI="#Hospital"/>
     </ObjectPropertyDomain>
@@ -1365,11 +1401,11 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#staysInICU"/>
-        <Class IRI="#Room"/>
+        <Class IRI="#Hospitalized"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#staysInNoICU"/>
-        <Class IRI="#Room"/>
+        <Class IRI="#Hospitalized"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#staysWith"/>
@@ -1430,6 +1466,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#isOwnedBy"/>
         <Class IRI="#Staff"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#posseses"/>
+        <Class IRI="#Ambulance"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#promotes"/>

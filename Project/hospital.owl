@@ -280,6 +280,9 @@
         <DataProperty IRI="#numberOfBeds"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#numberOfLeave"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#numberOfWorkers"/>
     </Declaration>
     <Declaration>
@@ -304,6 +307,9 @@
         <NamedIndividual IRI="#Augmentin"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#BusinessAdministrationDegree"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Callie_Torres"/>
     </Declaration>
     <Declaration>
@@ -316,13 +322,25 @@
         <NamedIndividual IRI="#Clinic2"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Cytopathology"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Derek_Sheperd"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Dimitris_Vergnis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DoctorDegree"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#EconomicsDegree"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Elena_Paparizou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Forensic_Pathology"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Fotini_Aggelaki"/>
@@ -373,6 +391,9 @@
         <NamedIndividual IRI="#Litsa_Kritsioni"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Lupus"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Man_Our"/>
     </Declaration>
     <Declaration>
@@ -391,6 +412,9 @@
         <NamedIndividual IRI="#Maura_Polydorou"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#MedicalOncology"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Meredith_Gray"/>
     </Declaration>
     <Declaration>
@@ -404,6 +428,12 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#NurseDegree"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Paidon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Radiation_Oncology"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Room1"/>
@@ -774,6 +804,10 @@
         <NamedIndividual IRI="#Augmentin"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Degree"/>
+        <NamedIndividual IRI="#BusinessAdministrationDegree"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Doctor"/>
         <NamedIndividual IRI="#Callie_Torres"/>
     </ClassAssertion>
@@ -790,8 +824,20 @@
         <NamedIndividual IRI="#Clinic2"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Pathology"/>
+        <NamedIndividual IRI="#Cytopathology"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LogisticsTeam"/>
+        <NamedIndividual IRI="#Derek_Sheperd"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Hospitalized"/>
         <NamedIndividual IRI="#Dimitris_Vergnis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Degree"/>
+        <NamedIndividual IRI="#DoctorDegree"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Degree"/>
@@ -800,6 +846,10 @@
     <ClassAssertion>
         <Class IRI="#Radiologist"/>
         <NamedIndividual IRI="#Elena_Paparizou"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pathology"/>
+        <NamedIndividual IRI="#Forensic_Pathology"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#MedicalAssistant"/>
@@ -866,6 +916,10 @@
         <NamedIndividual IRI="#Litsa_Kritsioni"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#KidneyAutoimmune"/>
+        <NamedIndividual IRI="#Lupus"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#LogisticsTeam"/>
         <NamedIndividual IRI="#Manolis_Foteinos"/>
     </ClassAssertion>
@@ -886,6 +940,10 @@
         <NamedIndividual IRI="#Maura_Polydorou"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Oncology"/>
+        <NamedIndividual IRI="#MedicalOncology"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Doctor"/>
         <NamedIndividual IRI="#Meredith_Gray"/>
     </ClassAssertion>
@@ -904,6 +962,14 @@
     <ClassAssertion>
         <Class IRI="#Degree"/>
         <NamedIndividual IRI="#NurseDegree"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Hospital"/>
+        <NamedIndividual IRI="#Paidon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Oncology"/>
+        <NamedIndividual IRI="#Radiation_Oncology"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Room"/>
@@ -941,6 +1007,11 @@
         <ObjectProperty IRI="#staysWith"/>
         <NamedIndividual IRI="#Alexis_Tsipras"/>
         <NamedIndividual IRI="#Kiriakos_Mitsotakis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#givesBonus"/>
+        <NamedIndividual IRI="#AttikoHospital"/>
+        <NamedIndividual IRI="#Ilias_Psinakis"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasEmployee"/>
@@ -1098,6 +1169,11 @@
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">745698132</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#grade"/>
+        <NamedIndividual IRI="#BusinessAdministrationDegree"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">8.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#specialty"/>
         <NamedIndividual IRI="#Callie_Torres"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Orthopedic</Literal>
@@ -1113,14 +1189,24 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#positiveInteger">150</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#numberOfLeave"/>
+        <NamedIndividual IRI="#Derek_Sheperd"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#SSN"/>
         <NamedIndividual IRI="#Dimitris_Vergnis"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">12040008895</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#grade"/>
+        <NamedIndividual IRI="#DoctorDegree"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">7.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#grade"/>
         <NamedIndividual IRI="#EconomicsDegree"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">8.3</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">8.9</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#staffID"/>
@@ -1136,6 +1222,11 @@
         <DataProperty IRI="#specialty"/>
         <NamedIndividual IRI="#Ilias_Psinakis"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Andrologist</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#staffID"/>
+        <NamedIndividual IRI="#Ilias_Psinakis"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">200</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#SSN"/>
@@ -1198,6 +1289,11 @@
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">159487632</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#numberOfLeave"/>
+        <NamedIndividual IRI="#Manolis_Foteinos"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#staffID"/>
         <NamedIndividual IRI="#Manolis_Foteinos"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
@@ -1218,6 +1314,16 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-25T09:00:00</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#numberOfLeave"/>
+        <NamedIndividual IRI="#Maura_Polydorou"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#phone"/>
+        <NamedIndividual IRI="#Maura_Polydorou"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">6945777958</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#staffID"/>
         <NamedIndividual IRI="#Maura_Polydorou"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
@@ -1236,6 +1342,11 @@
         <DataProperty IRI="#specialty"/>
         <NamedIndividual IRI="#Meredith_Gray"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">General Surgeon</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#staffID"/>
+        <NamedIndividual IRI="#Meredith_Gray"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">153</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#staffID"/>
@@ -1524,6 +1635,10 @@
         <DataProperty IRI="#numberOfBeds"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#numberOfLeave"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
     <DataPropertyDomain>
         <DataProperty IRI="#SSN"/>
         <Class IRI="#Patient"/>
@@ -1567,6 +1682,10 @@
     <DataPropertyDomain>
         <DataProperty IRI="#numberOfBeds"/>
         <Class IRI="#NoICU"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#numberOfLeave"/>
+        <Class IRI="#Staff"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#numberOfWorkers"/>
@@ -1626,6 +1745,10 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#numberOfBeds"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#numberOfLeave"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
     <DataPropertyRange>

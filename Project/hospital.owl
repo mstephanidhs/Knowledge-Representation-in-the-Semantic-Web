@@ -394,9 +394,6 @@
         <NamedIndividual IRI="#Lupus"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Man_Our"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Manolis_Foteinos"/>
     </Declaration>
     <Declaration>
@@ -1129,11 +1126,6 @@
         <NamedIndividual IRI="#Mimi_Kollarou"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#consistsOf"/>
-        <NamedIndividual IRI="#Man_Our"/>
-        <NamedIndividual IRI="#Markos_Tsigkounis"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#belongsTo"/>
         <NamedIndividual IRI="#Meredith_Gray"/>
         <NamedIndividual IRI="#Clinic1"/>
@@ -1282,11 +1274,6 @@
         <DataProperty IRI="#SSN"/>
         <NamedIndividual IRI="#Litsa_Kritsioni"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">718293645</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#SSN"/>
-        <NamedIndividual IRI="#Man_Our"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">159487632</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#numberOfLeave"/>

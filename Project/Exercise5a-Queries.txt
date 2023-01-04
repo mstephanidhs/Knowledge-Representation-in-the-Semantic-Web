@@ -61,7 +61,7 @@ WHERE
 SELECT DISTINCT ?Hospital ?phone
 WHERE
 {
-	?Hospital rdf:type <http://www.semanticweb.org/mariosstefanidis/ontologies/2022/11/hospital#Doctor>.
+	?Hospital rdf:type <http://www.semanticweb.org/mariosstefanidis/ontologies/2022/11/hospital#Hospital>.
 	?Hospital <http://www.semanticweb.org/mariosstefanidis/ontologies/2022/11/hospital#hasEmployee> ?Staff.
 	?Staff <http://www.semanticweb.org/mariosstefanidis/ontologies/2022/11/hospital#numberofLeave> ?leave
 	OPTIONAL

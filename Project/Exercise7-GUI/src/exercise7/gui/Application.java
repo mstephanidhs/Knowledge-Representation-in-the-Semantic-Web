@@ -4,7 +4,6 @@
  */
 package exercise7.gui;
 
-import java.awt.Dimension;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
@@ -14,7 +13,6 @@ import javax.swing.table.DefaultTableModel;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.ontology.*;
 import org.apache.jena.util.iterator.ExtendedIterator;
-//import openllet.jena.
 import openllet.jena.PelletReasonerFactory;
 import org.apache.jena.query.*;
 import org.apache.jena.query.QueryExecution;
@@ -74,6 +72,15 @@ public class Application extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jButton6 = new javax.swing.JButton();
         SearchInstances = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jComboBox5 = new javax.swing.JComboBox<>();
+        jLabel11 = new javax.swing.JLabel();
+        jComboBox6 = new javax.swing.JComboBox<>();
+        jLabel12 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTable4 = new javax.swing.JTable();
+        jTextField3 = new javax.swing.JTextField();
+        jButton7 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(569, 367));
@@ -345,6 +352,11 @@ public class Application extends javax.swing.JFrame {
                 jComboBox3ItemStateChanged(evt);
             }
         });
+        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox3ActionPerformed(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         jLabel8.setText("Please Select a Property:");
@@ -446,19 +458,115 @@ public class Application extends javax.swing.JFrame {
         Parent.add(QuerySPARQL, "card4");
 
         SearchInstances.setBackground(new java.awt.Color(255, 255, 255));
+        SearchInstances.setPreferredSize(new java.awt.Dimension(570, 320));
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel10.setText("Please Select a Class:");
+
+        jComboBox5.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBox5ItemStateChanged(evt);
+            }
+        });
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel11.setText("Please Select a Property:");
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jLabel12.setText("Please Provide a Value:");
+
+        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Instance(s)"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane4.setViewportView(jTable4);
+
+        jButton7.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        jButton7.setText("Submit");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout SearchInstancesLayout = new javax.swing.GroupLayout(SearchInstances);
         SearchInstances.setLayout(SearchInstancesLayout);
         SearchInstancesLayout.setHorizontalGroup(
             SearchInstancesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 570, Short.MAX_VALUE)
+            .addGroup(SearchInstancesLayout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addGroup(SearchInstancesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SearchInstancesLayout.createSequentialGroup()
+                        .addGap(130, 130, 130)
+                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SearchInstancesLayout.createSequentialGroup()
+                        .addGroup(SearchInstancesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(SearchInstancesLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(SearchInstancesLayout.createSequentialGroup()
+                                .addGap(141, 141, 141)
+                                .addComponent(jLabel12)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(SearchInstancesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jComboBox6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(470, 470, 470))))
+            .addGroup(SearchInstancesLayout.createSequentialGroup()
+                .addGap(97, 97, 97)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
+                .addComponent(jButton7)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         SearchInstancesLayout.setVerticalGroup(
             SearchInstancesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 320, Short.MAX_VALUE)
+            .addGroup(SearchInstancesLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(SearchInstancesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel11))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(SearchInstancesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(SearchInstancesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SearchInstancesLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(74, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SearchInstancesLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton7)
+                        .addGap(109, 109, 109))))
         );
 
-        Parent.add(SearchInstances, "card5");
+        Parent.add(SearchInstances, "card4");
 
         getContentPane().add(Parent);
         Parent.setBounds(0, 60, 570, 320);
@@ -542,23 +650,42 @@ public class Application extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         
         String selectedProperty = jComboBox4.getSelectedItem().toString();
-        String proValue = jTextField2.getText();
+        String selectedClass = jComboBox3.getSelectedItem().toString();
+        String queryString;
         
         DefaultTableModel tblModel = (DefaultTableModel) jTable2.getModel();
         tblModel.setRowCount(0);
         
-        String queryString;
-        queryString = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>"
+        if (jTextField2.getText().isEmpty()) {
+            queryString = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>"
+                    + "PREFIX owl: <http://www.w3.org/2002/07/owl#>"
+                    + "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"
+                    + "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>"
+                    + "PREFIX : <http://www.semanticweb.org/mariosstefanidis/ontologies/2022/11/hospital#>"
+                    + "SELECT ?x\n"
+                    + "WHERE\n"
+                    + "{\n"
+                    + "?x rdf:type :" + selectedClass + ";\n" 
+                    + ":" + selectedProperty + " ?y\n"
+                    + "}";
+        }
+        else {
+            String propValue = jTextField2.getText();
+            
+            queryString = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>"
                 + "PREFIX owl: <http://www.w3.org/2002/07/owl#>"
                 + "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"
                 + "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>"
                 + "PREFIX : <http://www.semanticweb.org/mariosstefanidis/ontologies/2022/11/hospital#>"
-                + "SELECT ?data"
-                + "WHERE"
-                + "{"
-                + "?data :" + selectedProperty + " :" + proValue + ".\n"
+                + "SELECT ?x\n"
+                + "WHERE\n"
+                + "{\n"
+                + "?x rdf:type :" + selectedClass + ";\n" 
+                + ":" + selectedProperty + " ?y\n"
+                + "FILTER (?y=" + propValue + ")\n"
                 + "}";
-                    
+        }
+        
         Query query = QueryFactory.create(queryString);
         
         try (QueryExecution qexec = QueryExecutionFactory.create(query, m)) {
@@ -566,15 +693,56 @@ public class Application extends javax.swing.JFrame {
             
             for (; result.hasNext() ;) {
                 QuerySolution qsol = result.nextSolution();
-                String tblData[] = {qsol.get("data").asNode().getLocalName()};
+                String tblData[] = {qsol.get("x").asNode().getLocalName()};
                 tblModel.addRow(tblData);
             }
         }
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        Parent.removeAll();
+        Parent.add(SearchInstances);
+        Parent.repaint();
+        Parent.revalidate();
+        retrieveClasses(jComboBox5);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jComboBox5ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox5ItemStateChanged
+        String selectClass = jComboBox5.getSelectedItem().toString();
+        jComboBox6.removeAllItems();
+        getProperties(selectClass, jComboBox6);
+    }//GEN-LAST:event_jComboBox5ItemStateChanged
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        final OntClass myClass = m.getOntClass(base + jComboBox5.getSelectedItem().toString());
+        ExtendedIterator instances = myClass.listInstances();
+        
+        OntProperty property = m.createOntProperty(base + jComboBox6.getSelectedItem().toString());
+        
+        DefaultTableModel tblModel4 = (DefaultTableModel) jTable4.getModel();
+        tblModel4.setRowCount(0);
+        
+        String propertyValue = base + jTextField3.getText();
+        
+        while (instances.hasNext()) {
+            OntResource or1 = (OntResource) instances.next();
+            try {
+                if (or1.getPropertyValue(property) != null) {
+                    if (propertyValue.equals(or1.getPropertyValue(property).toString())) {
+                        String tbData[] = {or1.getLocalName()};
+                        tblModel4.addRow(tbData);
+                    }
+                }
+            }
+            catch (Exception ex) {
+                System.out.println("Something went wrong.");
+            }   
+        }    
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -600,6 +768,8 @@ public class Application extends javax.swing.JFrame {
         //set base
         base = "http://www.semanticweb.org/mariosstefanidis/ontologies/2022/11/hospital#";
         m.setStrictMode(false);
+        
+        InfModel inf = ModelFactory.createRDFSModel(model);
         
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -682,11 +852,17 @@ public class Application extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
+    private javax.swing.JComboBox<String> jComboBox5;
+    private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -697,9 +873,12 @@ public class Application extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
+    private javax.swing.JTable jTable4;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 }

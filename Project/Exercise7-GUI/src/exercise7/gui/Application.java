@@ -9,6 +9,7 @@ import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.ontology.*;
@@ -595,20 +596,23 @@ public class Application extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-      
+        //get the item that the user selected from the jComboBox
         String selected_class = jComboBox1.getSelectedItem().toString();
-        
+        //get the ontology class
         OntClass myClass = m.getOntClass(base + selected_class);
-        
+        //initialize the table 
         DefaultTableModel tableModel = (DefaultTableModel) jTable3.getModel();
         tableModel.setRowCount(0);
-        
+        //iterator that contains all the instances of the selected class
         ExtendedIterator instances = myClass.listInstances();
         
+        //iterate
         while (instances.hasNext()) {
+            //get the instance
             Individual myInstance = (Individual) instances.next();
+            //get the name of the instance
             String individual = myInstance.getLocalName();
-            
+            //add it to the table
             String tbData[] = {individual};
             tableModel.addRow(tbData);
         }
@@ -616,17 +620,22 @@ public class Application extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        //get the selected class from the corresponding jComboBox
         String selectedClass = jComboBox2.getSelectedItem().toString();
-        
+        //get the name of the instance that the user typed
         String newInstance = jTextField1.getText();
-        
+        //get the ontolgoy class
         OntClass sel_Class = model.getOntClass(base + selectedClass);
+        //create the instance of the specific ontology class
         Individual instance = model.createIndividual(base + newInstance, sel_Class);
         
         OutputStream output;
-        
+        //create a new .owl file which contains the instance
+        //that was created from the user
         try {
             output = new FileOutputStream("hospitalFinal.owl");
+            model.write(output);
+            JOptionPane.showMessageDialog(null, "The insertion was successful!");
         }
         catch (FileNotFoundException ex) {
             System.out.println("Something went wrong.");
@@ -648,14 +657,16 @@ public class Application extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox3ItemStateChanged
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        
+        //get the context of the JComboBoxes that the user selected
         String selectedProperty = jComboBox4.getSelectedItem().toString();
         String selectedClass = jComboBox3.getSelectedItem().toString();
         String queryString;
-        
+        //initialize the table
         DefaultTableModel tblModel = (DefaultTableModel) jTable2.getModel();
         tblModel.setRowCount(0);
         
+        //run the corresponding SPARQL query depending on the context of
+        // the jTextField (if it's empty or not)
         if (jTextField2.getText().isEmpty()) {
             queryString = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>"
                     + "PREFIX owl: <http://www.w3.org/2002/07/owl#>"
@@ -685,12 +696,13 @@ public class Application extends javax.swing.JFrame {
                 + "FILTER (?y=" + propValue + ")\n"
                 + "}";
         }
-        
+        //create query
         Query query = QueryFactory.create(queryString);
-        
+        //execute query
         try (QueryExecution qexec = QueryExecutionFactory.create(query, m)) {
+            //get the result(s) of the query
             ResultSet result = qexec.execSelect();
-            
+            //iterate
             for (; result.hasNext() ;) {
                 QuerySolution qsol = result.nextSolution();
                 String tblData[] = {qsol.get("x").asNode().getLocalName()};
@@ -714,21 +726,27 @@ public class Application extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox5ItemStateChanged
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        //get ontology class
         final OntClass myClass = m.getOntClass(base + jComboBox5.getSelectedItem().toString());
+        //iterator that contains all the instances of the ontology class
         ExtendedIterator instances = myClass.listInstances();
-        
+        //create the property based on the input of the user
         OntProperty property = m.createOntProperty(base + jComboBox6.getSelectedItem().toString());
-        
+        //initialize table
         DefaultTableModel tblModel4 = (DefaultTableModel) jTable4.getModel();
         tblModel4.setRowCount(0);
         
         String propertyValue = base + jTextField3.getText();
-        
+        //iterate
         while (instances.hasNext()) {
+            //get the instance
             OntResource or1 = (OntResource) instances.next();
             try {
+                //check if it is not empty
                 if (or1.getPropertyValue(property) != null) {
+                    //if the instance's value and the value that the user has given is equal
                     if (propertyValue.equals(or1.getPropertyValue(property).toString())) {
+                        //add new row to the table
                         String tbData[] = {or1.getLocalName()};
                         tblModel4.addRow(tbData);
                     }
@@ -798,40 +816,52 @@ public class Application extends javax.swing.JFrame {
     }
     
     protected void retrieveClasses(JComboBox cb) {
-        
+        //string array in which the results will be stored
         ArrayList<String> classesArray = new ArrayList<>();
+        //iterator that contains all the classes of the OWL ontology
         ExtendedIterator<OntClass> iter = model.listNamedClasses();
         
+        //iterate 
         while (iter.hasNext()) {
+            //get the ontology class
             OntClass myClass = (OntClass) iter.next();
+            //get its name
             String lnClass = myClass.getLocalName();
             
             if (!myClass.toString().contains("http")) {
                 continue;
             }
-            
+            //if it returns a name, then add it to the array
             if (lnClass != null) {
                 classesArray.add(lnClass);
             }
         }
         
+        //pass every item in the array to the JComboBox GUI item
         classesArray.forEach(i -> {
             cb.addItem(i);
         });  
     }
     
     protected void getProperties(String myClass, JComboBox jcb) {
-        
+        //get the selected class from the corresponding JComboBox
+        //and create the correct URI
         OntClass selectedClass = model.getOntClass(base + myClass);
         
+        //iterator that contains all the properties of the specific class
         ExtendedIterator<OntProperty> prop = selectedClass.listDeclaredProperties(true);
+        //string array in which the results will be stored
         ArrayList<String> propArray = new ArrayList<>();
         
+        //iterate
         while (prop.hasNext()) {
+            //get the property
             OntProperty op = prop.next();
+            //add it the array
             propArray.add(op.getLocalName());
         }
         
+        //pass every item in the array to the JComboBox GUI item
         propArray.forEach(i -> {
             jcb.addItem(i);
         });
